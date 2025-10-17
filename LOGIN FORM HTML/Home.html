@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>User Login</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index,follow">
+    <meta name="generator" content="GrapesJS Studio">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    "lg": {
+                        "max": "992px"
+                    },
+                    "md": {
+                        "max": "768px"
+                    },
+                    "sm": {
+                        "max": "480px"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="gjs-t-body cls-ze1p1q">
+    <main class="login-container">
+        <div class="login-card">
+            <div class="brand-section"><img src="falcon.png" alt="Company logo on white background" loading="lazy" class="company-logo"/>
+                <h1 class="gjs-t-h1 login-title">User Login</h1>
+            </div>
+            <div class="error-message-container">
+                <p class="error-message-text">Invalid email or password. Please try again.</p>
+            </div>
+            <form class="login-form">
+                <div>
+                    <label for="email" class="email-label">Email Address</label><input type="email" id="email" name="email" required aria-label="Email address" aria-required="true" class="gjs-t-border email-input"/><span class="email-error-message">Please enter a valid email address</span>
+                </div>
+                <div>
+                    <label for="password" class="password-label">Password</label><input type="password" id="password" name="password" required aria-label="Password" aria-required="true" class="gjs-t-border password-input"/><span class="password-error-message">Password is required</span>
+                </div>
+                <div class="remember-me-container">
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="remember" name="remember" class="remember-me-checkbox"/><label for="remember" class="remember-me-label">Remember me</label>
+                    </div><a href="#" class="gjs-t-link forgot-password-link">Forgot Password?</a>
+                </div><button type="submit" class="gjs-t-button submit-button">
+                    Log In
+                </button>
+            </form>
+            <div class="security-notice-container">
+                <p class="security-notice-text">Your login information is encrypted and secure. We never share your
+                    data.</p>
+            </div>
+        </div>
+        <div class="footer-links-container"><a href="#" class="contact-support-link">Contact
+                Support</a><span class="link-separator">|</span><a href="#" class="help-link">Help</a></div>
+    </main>
+</body>
+
+</html>
