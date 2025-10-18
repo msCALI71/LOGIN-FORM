@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Registration Details</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="gjs-t-body cls-ze1p1q">
+  <main class="login-container">
+    <div class="login-card" id="i93yr">
+      <div class="brand-section">
+        <h1 class="gjs-t-h1 login-title">Registration Details</h1>
+      </div>
+
+      <div id="studentDetails" class="text-white space-y-3"></div>
+
+      <div class="mt-6 text-center">
+        <a href="register.html" class="gjs-t-button submit-button inline-block">Back to Registration</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const data = JSON.parse(localStorage.getItem("studentData"));
+      const detailsDiv = document.getElementById("studentDetails");
+
+      if (!data) {
+        detailsDiv.innerHTML = `<p class="text-red-400">No registration data found.</p>`;
+        return;
+      }
+
+      detailsDiv.innerHTML = `
+        <p><strong>First Name:</strong> ${data.firstName}</p>
+        <p><strong>Last Name:</strong> ${data.lastName}</p>
+        <p><strong>Email:</strong> ${data.email}</p>
+        <p><strong>Password:</strong> ${data.password}</p>
+        <p><strong>Age:</strong> ${data.age}</p>
+        <p><strong>Address:</strong> ${data.address}</p>
+        <p><strong>Course / Program:</strong> ${data.course}</p>
+      `;
+    });
+  </script>
+</body>
+
+</html>

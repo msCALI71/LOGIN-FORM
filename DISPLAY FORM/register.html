@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Student Registration</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index,follow">
+  <meta name="generator" content="GrapesJS Studio">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+          "lg": { "max": "992px" },
+          "md": { "max": "768px" },
+          "sm": { "max": "480px" }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="gjs-t-body cls-ze1p1q">
+  <main class="login-container">
+    <div class="login-card" id="i93yr">
+      <div class="brand-section">
+        <img src="falcon.png" alt="Company logo" loading="lazy" class="company-logo" />
+        <h1 class="gjs-t-h1 login-title">Student Registration</h1>
+      </div>
+
+      <form class="login-form" id="registerForm">
+        <div>
+          <label for="firstName" class="email-label">First Name</label>
+          <input type="text" id="firstName" name="firstName" required class="gjs-t-border email-input"
+            placeholder="Enter first name" />
+        </div>
+
+        <div>
+          <label for="lastName" class="email-label">Last Name</label>
+          <input type="text" id="lastName" name="lastName" required class="gjs-t-border email-input"
+            placeholder="Enter last name" />
+        </div>
+
+        <div>
+          <label for="email" class="email-label">Email</label>
+          <input type="email" id="email" name="email" required class="gjs-t-border email-input"
+            placeholder="Enter your email" />
+        </div>
+
+        <div>
+          <label for="password" class="password-label">Password</label>
+          <input type="password" id="password" name="password" required class="gjs-t-border password-input"
+            placeholder="Enter password" />
+        </div>
+
+        <div>
+          <label for="age" class="email-label">Age</label>
+          <input type="number" id="age" name="age" required class="gjs-t-border email-input"
+            placeholder="Enter age" />
+        </div>
+
+        <div>
+          <label for="address" class="email-label">Address</label>
+          <input type="text" id="address" name="address" required class="gjs-t-border email-input"
+            placeholder="Enter address" />
+        </div>
+
+        <div>
+          <label for="course" class="email-label">Course / Program</label>
+          <select id="course" name="course" required class="gjs-t-border email-input">
+            <option value="">Select Course</option>
+            <option value="BS Computer Science">BS Computer Science</option>
+            <option value="BS Information Technology">BS Information Technology</option>
+            <option value="BS Information Systems">BS Information Systems</option>
+            <option value="BS Computer Engineering">BS Computer Engineering</option>
+          </select>
+        </div>
+
+        <div class="mt-4 flex justify-between">
+          <button type="submit" class="gjs-t-button submit-button w-1/2 mr-2">Register</button>
+          <button type="button" id="clearBtn" class="gjs-t-button submit-button w-1/2 ml-2 bg-gray-500 text-white">Clear</button>
+        </div>
+      </form>
+
+      <div class="security-notice-container">
+        <p class="security-notice-text">
+          Your registration data is stored securely and never shared.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
